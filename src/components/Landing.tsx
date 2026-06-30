@@ -1,10 +1,14 @@
-import { useState, useEffect } from "react";
-import { FaAward } from "react-icons/fa6";
+import { useState, useEffect, useRef } from "react";
+import { FaAward, FaPlay } from "react-icons/fa6";
 import { TbNotes } from "react-icons/tb";
+import { IoVolumeHighOutline, IoVolumeMuteOutline } from "react-icons/io5";
 import "./styles/Landing.css";
 
 const Landing = () => {
   const [coords, setCoords] = useState({ x: 0, y: 0 });
+  const [isMuted, setIsMuted] = useState(false);
+  const [hasStarted, setHasStarted] = useState(false);
+  const videoRef = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
@@ -19,6 +23,28 @@ const Landing = () => {
       window.removeEventListener("mousemove", handleMouseMove);
     };
   }, []);
+
+  const handlePlayClick = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    if (videoRef.current) {
+      videoRef.current.currentTime = 0;
+      videoRef.current.muted = false;
+      setIsMuted(false);
+      videoRef.current.play().then(() => {
+        setHasStarted(true);
+      }).catch(err => {
+        console.warn("Play failed:", err);
+      });
+    }
+  };
+
+  const toggleMute = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    if (videoRef.current) {
+      videoRef.current.muted = !videoRef.current.muted;
+      setIsMuted(videoRef.current.muted);
+    }
+  };
 
   const cardStyle = {
     transform: `perspective(1000px) rotateX(${coords.y * 12}deg) rotateY(${coords.x * 12}deg) translate3d(${coords.x * 10}px, ${-coords.y * 10}px, 0)`,
@@ -66,8 +92,35 @@ const Landing = () => {
 
           <div className="hero-visual">
             <div className="profile-image-card glass-panel" style={cardStyle}>
-              <div className="profile-image-wrapper">
-                <img src="/images/profile_video.png" alt="Asmath Shaik" className="profile-photo" />
+              <div className="profile-image-wrapper" style={{ position: "relative" }}>
+                <video
+                  ref={videoRef}
+                  src="/images/profile_video.mp4"
+                  muted={isMuted}
+                  playsInline
+                  className="profile-photo"
+                  style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
+                />
+                
+                {!hasStarted && (
+                  <div className="video-play-overlay" onClick={handlePlayClick} data-cursor="disable">
+                    <button className="video-play-btn" aria-label="Play Introduction Video">
+                      <FaPlay />
+                    </button>
+                    <span className="video-play-text">Play Intro Video</span>
+                  </div>
+                )}
+
+                {hasStarted && (
+                  <button 
+                    className="video-volume-btn" 
+                    onClick={toggleMute} 
+                    aria-label="Toggle Volume"
+                    data-cursor="disable"
+                  >
+                    {isMuted ? <IoVolumeMuteOutline /> : <IoVolumeHighOutline />}
+                  </button>
+                )}
               </div>
               <div className="profile-card-footer">
                 <h4>Asmath Shaik</h4>

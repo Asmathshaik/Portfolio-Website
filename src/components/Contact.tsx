@@ -28,8 +28,19 @@ const Contact = () => {
               target="_blank"
               data-cursor="disable"
               className="contact-social"
+              rel="noopener noreferrer"
             >
               Github <MdArrowOutward />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/ashaik-shaik-ab2914364"
+              target="_blank"
+              data-cursor="disable"
+              className="contact-social"
+              rel="noopener noreferrer"
+              style={{ marginTop: "10px", display: "inline-flex" }}
+            >
+              LinkedIn <MdArrowOutward />
             </a>
           </div>
           <div className="contact-box">

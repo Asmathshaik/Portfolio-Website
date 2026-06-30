@@ -1,4 +1,4 @@
-import { FaGithub } from "react-icons/fa6";
+import { FaGithub, FaLinkedinIn } from "react-icons/fa6";
 import "./styles/SocialIcons.css";
 import { useEffect } from "react";
 
@@ -53,8 +53,13 @@ const SocialIcons = () => {
     <div className="icons-section">
       <div className="social-icons" data-cursor="icons" id="social">
         <span>
-          <a href="https://github.com/Asmathshaik" target="_blank">
+          <a href="https://github.com/Asmathshaik" target="_blank" rel="noopener noreferrer">
             <FaGithub />
+          </a>
+        </span>
+        <span>
+          <a href="https://www.linkedin.com/in/ashaik-shaik-ab2914364" target="_blank" rel="noopener noreferrer">
+            <FaLinkedinIn />
           </a>
         </span>
       </div>
