@@ -13,14 +13,14 @@ import {
 
 const textureLoader = new THREE.TextureLoader();
 const imageUrls = [
-  "/images/react2.webp",
-  "/images/next2.webp",
-  "/images/node2.webp",
-  "/images/express.webp",
-  "/images/mongo.webp",
-  "/images/mysql.webp",
-  "/images/typescript.webp",
-  "/images/javascript.webp",
+  "/images/jira.jpg",
+  "/images/msproject.jpg",
+  "/images/trello.jpg",
+  "/images/excel.jpg",
+  "/images/scrum.jpg",
+  "/images/sixsigma.jpg",
+  "/images/prince2.jpg",
+  "/images/pmp.jpg",
 ];
 const textures = imageUrls.map((url) => textureLoader.load(url));
 
@@ -126,15 +126,23 @@ function Pointer({ vec = new THREE.Vector3(), isActive }: PointerProps) {
 
 const TechStack = () => {
   const [isActive, setIsActive] = useState(false);
+  const [isDesktop, setIsDesktop] = useState(window.innerWidth > 1024);
 
   useEffect(() => {
+    const handleResize = () => {
+      setIsDesktop(window.innerWidth > 1024);
+    };
+    window.addEventListener("resize", handleResize);
+
     const handleScroll = () => {
       const scrollY = window.scrollY || document.documentElement.scrollTop;
-      const threshold = document
-        .getElementById("work")!
-        .getBoundingClientRect().top;
-      setIsActive(scrollY > threshold);
+      const workElem = document.getElementById("work");
+      if (workElem) {
+        const threshold = workElem.getBoundingClientRect().top;
+        setIsActive(scrollY > threshold);
+      }
     };
+
     document.querySelectorAll(".header a").forEach((elem) => {
       const element = elem as HTMLAnchorElement;
       element.addEventListener("click", () => {
@@ -146,11 +154,14 @@ const TechStack = () => {
         }, 1000);
       });
     });
+
     window.addEventListener("scroll", handleScroll);
     return () => {
+      window.removeEventListener("resize", handleResize);
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
   const materials = useMemo(() => {
     return textures.map(
       (texture) =>
@@ -167,46 +178,86 @@ const TechStack = () => {
   }, []);
 
   return (
-    <div className="techstack">
-      <h2> My Techstack</h2>
+    <div className="techstack" id="toolkit">
+      <h2>My PM Toolkit</h2>
+      <div className="toolkit-grid">
+        <div className="toolkit-info glass-panel">
+          <div className="toolkit-group">
+            <h3>Tools & Software</h3>
+            <p>Jira, Trello, Asana, MS Project, Advanced Excel</p>
+            <div className="toolkit-icons-row">
+              <img src="/images/icons/jira.jpg" alt="Jira" className="toolkit-icon" />
+              <img src="/images/icons/trello.jpg" alt="Trello" className="toolkit-icon" />
+              <img src="/images/icons/msproject.jpg" alt="MS Project" className="toolkit-icon" />
+              <img src="/images/icons/excel.jpg" alt="Excel" className="toolkit-icon" />
+            </div>
+          </div>
+          <div className="toolkit-group">
+            <h3>Methodologies</h3>
+            <p>Agile, Scrum, Waterfall, Hybrid, Lean Six Sigma</p>
+            <div className="toolkit-icons-row">
+              <img src="/images/icons/scrum.jpg" alt="Scrum" className="toolkit-icon" />
+              <img src="/images/icons/sixsigma.jpg" alt="Lean Six Sigma" className="toolkit-icon" />
+            </div>
+          </div>
+          <div className="toolkit-group">
+            <h3>Certifications</h3>
+            <p>Google PM, PRINCE2, PMP, Agile Scrum, Lean Six Sigma Green Belt, AI Level 3</p>
+            <div className="toolkit-icons-row">
+              <img src="/images/icons/pmp.jpg" alt="PMP" className="toolkit-icon" />
+              <img src="/images/icons/prince2.jpg" alt="PRINCE2" className="toolkit-icon" />
+              <img src="/images/icons/scrum.jpg" alt="Scrum" className="toolkit-icon" />
+              <img src="/images/icons/sixsigma.jpg" alt="Six Sigma" className="toolkit-icon" />
+            </div>
+          </div>
+          <div className="toolkit-group">
+            <h3>Core Skills</h3>
+            <p>Risk Management, Stakeholder Engagement, Budget Control, RAID Management, Project Planning</p>
+          </div>
+        </div>
 
-      <Canvas
-        shadows
-        gl={{ alpha: true, stencil: false, depth: false, antialias: false }}
-        camera={{ position: [0, 0, 20], fov: 32.5, near: 1, far: 100 }}
-        onCreated={(state) => (state.gl.toneMappingExposure = 1.5)}
-        className="tech-canvas"
-      >
-        <ambientLight intensity={1} />
-        <spotLight
-          position={[20, 20, 25]}
-          penumbra={1}
-          angle={0.2}
-          color="white"
-          castShadow
-          shadow-mapSize={[512, 512]}
-        />
-        <directionalLight position={[0, 5, -4]} intensity={2} />
-        <Physics gravity={[0, 0, 0]}>
-          <Pointer isActive={isActive} />
-          {spheres.map((props, i) => (
-            <SphereGeo
-              key={i}
-              {...props}
-              material={materials[Math.floor(Math.random() * materials.length)]}
-              isActive={isActive}
-            />
-          ))}
-        </Physics>
-        <Environment
-          files="/models/char_enviorment.hdr"
-          environmentIntensity={0.5}
-          environmentRotation={[0, 4, 2]}
-        />
-        <EffectComposer enableNormalPass={false}>
-          <N8AO color="#0f002c" aoRadius={2} intensity={1.15} />
-        </EffectComposer>
-      </Canvas>
+        {isDesktop && (
+          <div className="toolkit-visual">
+            <Canvas
+              shadows
+              gl={{ alpha: true, stencil: false, depth: false, antialias: false }}
+              camera={{ position: [0, 0, 20], fov: 32.5, near: 1, far: 100 }}
+              onCreated={(state) => (state.gl.toneMappingExposure = 1.5)}
+              className="tech-canvas"
+            >
+              <ambientLight intensity={1} />
+              <spotLight
+                position={[20, 20, 25]}
+                penumbra={1}
+                angle={0.2}
+                color="white"
+                castShadow
+                shadow-mapSize={[512, 512]}
+              />
+              <directionalLight position={[0, 5, -4]} intensity={2} />
+              <Physics gravity={[0, 0, 0]}>
+                <Pointer isActive={isActive} />
+                {spheres.map((props, i) => (
+                  <SphereGeo
+                    key={i}
+                    {...props}
+                    material={materials[Math.floor(Math.random() * materials.length)]}
+                    isActive={isActive}
+                  />
+                ))}
+              </Physics>
+              <Environment
+                files="/models/char_enviorment.hdr"
+                environmentIntensity={0.5}
+                environmentRotation={[0, 4, 2]}
+              />
+              <EffectComposer enableNormalPass={false}>
+                <N8AO color="#0f002c" aoRadius={2} intensity={1.15} />
+              </EffectComposer>
+            </Canvas>
+          </div>
+        )}
+      </div>
     </div>
   );
 };

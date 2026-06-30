@@ -1,103 +1,101 @@
 .icons-section {
   position: fixed;
-  max-width: var(--cMaxWidth);
-  width: var(--cWidth);
   bottom: 0;
-  z-index: 99;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 0;
+  width: 100%;
+  height: 0;
+  z-index: 999;
+  pointer-events: none;
 }
+
 .social-icons {
-  position: absolute;
-  left: -20px;
-  bottom: 20px;
+  position: fixed;
+  left: 40px;
+  bottom: 40px;
   display: none;
   flex-direction: column;
-  gap: 8px;
+  gap: 15px;
   z-index: 999;
-  padding: 10px;
+  pointer-events: auto;
 }
-.social-icons:hover {
-  transition: 0.3s;
-  color: var(--backgroundColor);
-}
-.social-icons a:hover {
-  color: var(--backgroundColor);
-  /* transform: scale(1.2); */
-}
+
 .social-icons span {
-  width: 50px;
-  height: 50px;
-  position: relative;
-  display: flex;
-}
-.social-icons a {
-  --siLeft: 50%;
-  --siTop: 50%;
-  position: absolute;
-  left: var(--siLeft, 50%);
-  top: var(--siTop, 50%);
-  transform: translate(-50%, -50%);
-  display: flex;
-  font-size: 23px;
-  will-change: left, top;
-  transition: transform 0.3s ease-out;
-}
-.resume-button {
-  position: absolute;
-  z-index: 99;
-  display: flex;
-  gap: 5px;
-  bottom: 40px;
-  right: 0;
-  width: auto;
-  text-wrap: nowrap;
-  letter-spacing: 4px;
-  font-size: 15px;
-  line-height: 15px;
-  font-weight: 600;
-  color: #5e5e5e;
-  cursor: pointer;
-  transition: 0.5s;
-  transform-origin: left bottom;
-  transform: translateX(100%) rotateZ(-90deg);
-}
-.resume-button:hover {
-  color: #fff;
-}
-div.resume-button span {
-  color: #fff;
-  font-size: 17px;
-  margin-top: -1px;
   display: flex;
   align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  background: rgba(13, 23, 42, 0.7);
+  backdrop-filter: blur(8px);
+  border: 1px solid var(--cardBorder);
+  border-radius: 50%;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
 }
-.check-line {
+
+.social-icons span:hover {
+  border-color: var(--accentColor);
+  transform: translateY(-3px);
+  box-shadow: 0 4px 20px rgba(59, 130, 246, 0.25);
+}
+
+.social-icons a {
+  display: flex;
+  font-size: 20px;
+  color: var(--textColor);
+  transition: color 0.25s ease;
+}
+
+.social-icons a:hover {
+  color: #60a5fa;
+}
+
+.resume-button {
   position: fixed;
-  top: 655px;
-  left: 0;
-  height: 1px;
-  background-color: #ffffff;
-  width: 100%;
-  z-index: 99999;
+  bottom: 40px;
+  right: 40px;
+  z-index: 999;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+  color: white !important;
+  padding: 14px 28px;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: 1px;
+  box-shadow: 0 0 15px rgba(37, 99, 235, 0.4), 0 0 30px rgba(37, 99, 235, 0.2);
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  pointer-events: auto;
+  animation: resumePulse 2s infinite;
 }
-@media only screen and (min-width: 900px) {
+
+.resume-button:hover {
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.6), 0 0 40px rgba(59, 130, 246, 0.3);
+  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+}
+
+.resume-button svg {
+  font-size: 18px;
+}
+
+@keyframes resumePulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(37, 99, 235, 0.6);
+  }
+  70% {
+    box-shadow: 0 0 0 12px rgba(37, 99, 235, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(37, 99, 235, 0);
+  }
+}
+
+@media screen and (min-width: 900px) {
   .social-icons {
     display: flex;
-    gap: 20px;
-  }
-  .social-icons a {
-    font-size: 28px;
-  }
-}
-@media only screen and (min-width: 768px) {
-  .resume-button {
-    transform: none;
-    font-size: 20px;
-    line-height: 20px;
-  }
-  div.resume-button span {
-    font-size: 23px;
-    margin-top: -1.5px;
   }
 }

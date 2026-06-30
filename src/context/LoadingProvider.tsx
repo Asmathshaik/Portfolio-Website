@@ -24,7 +24,21 @@ export const LoadingProvider = ({ children }: PropsWithChildren) => {
     setIsLoading,
     setLoading,
   };
-  useEffect(() => {}, [loading]);
+
+  useEffect(() => {
+    let current = 0;
+    const interval = setInterval(() => {
+      if (current < 100) {
+        current += Math.floor(Math.random() * 12) + 5; // increment between 5% and 16%
+        if (current > 100) current = 100;
+        setLoading(current);
+      } else {
+        clearInterval(interval);
+      }
+    }, 80);
+
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <LoadingContext.Provider value={value as LoadingType}>

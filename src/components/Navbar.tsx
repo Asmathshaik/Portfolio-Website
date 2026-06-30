@@ -1,79 +1,54 @@
 import { useEffect } from "react";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import HoverLinks from "./HoverLinks";
-import { gsap } from "gsap";
-import { ScrollSmoother } from "gsap-trial/ScrollSmoother";
 import "./styles/Navbar.css";
-
-gsap.registerPlugin(ScrollSmoother, ScrollTrigger);
-export let smoother: ScrollSmoother;
 
 const Navbar = () => {
   useEffect(() => {
-    smoother = ScrollSmoother.create({
-      wrapper: "#smooth-wrapper",
-      content: "#smooth-content",
-      smooth: 1.7,
-      speed: 1.7,
-      effects: true,
-      autoResize: true,
-      ignoreMobileResize: true,
-    });
+    const handleScroll = () => {
+      const header = document.querySelector(".header");
+      if (header) {
+        if (window.scrollY > 50) {
+          header.classList.add("header-scrolled");
+        } else {
+          header.classList.remove("header-scrolled");
+        }
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
 
-    smoother.scrollTop(0);
-    smoother.paused(true);
-
-    let links = document.querySelectorAll(".header ul a");
-    links.forEach((elem) => {
-      let element = elem as HTMLAnchorElement;
-      element.addEventListener("click", (e) => {
-        if (window.innerWidth > 1024) {
-          e.preventDefault();
-          let elem = e.currentTarget as HTMLAnchorElement;
-          let section = elem.getAttribute("data-href");
-          smoother.scrollTo(section, true, "top top");
+    const links = document.querySelectorAll(".header ul a");
+    links.forEach((link) => {
+      link.addEventListener("click", (e) => {
+        e.preventDefault();
+        const target = link.getAttribute("href");
+        if (target) {
+          const element = document.querySelector(target);
+          if (element) {
+            element.scrollIntoView({ behavior: "smooth" });
+          }
         }
       });
     });
-    window.addEventListener("resize", () => {
-      ScrollSmoother.refresh(true);
-    });
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, []);
+
   return (
     <>
       <div className="header">
-        <a href="/#" className="navbar-title" data-cursor="disable">
-          Logo
-        </a>
-        <a
-          href="mailto:example@mail.com"
-          className="navbar-connect"
-          data-cursor="disable"
-        >
-          example@mail.com
-        </a>
         <ul>
           <li>
-            <a data-href="#about" href="#about">
-              <HoverLinks text="ABOUT" />
-            </a>
+            <a href="#about">ABOUT</a>
           </li>
           <li>
-            <a data-href="#work" href="#work">
-              <HoverLinks text="WORK" />
-            </a>
+            <a href="#work">WORK</a>
           </li>
           <li>
-            <a data-href="#contact" href="#contact">
-              <HoverLinks text="CONTACT" />
-            </a>
+            <a href="#contact">CONTACT</a>
           </li>
         </ul>
       </div>
-
-      <div className="landing-circle1"></div>
-      <div className="landing-circle2"></div>
-      <div className="nav-fade"></div>
     </>
   );
 };

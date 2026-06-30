@@ -87,24 +87,22 @@ const WhatIDo = () => {
             <div className="what-corner"></div>
 
             <div className="what-content-in">
-              <h3>DEVELOP</h3>
+              <h3>PROJECT DELIVERY</h3>
               <h4>Description</h4>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas
-                quia aliquid laboriosam ducimus sit molestiae.
+                Managing end-to-end hybrid and agile initiatives, tracking RAG status weekly, ensuring smooth delivery at each governance gate, and coordinating UAT sign-off.
               </p>
-              <h5>Skillset & tools</h5>
+              <h5>Methodologies & tools</h5>
               <div className="what-content-flex">
-                <div className="what-tags">JavaScript</div>
-                <div className="what-tags">TypeScript</div>
-                <div className="what-tags">Three.js</div>
-                <div className="what-tags">React</div>
-                <div className="what-tags">Css</div>
-                <div className="what-tags">Node.js</div>
-                <div className="what-tags">Next.js</div>
-                <div className="what-tags">Express.js</div>
-                <div className="what-tags">PHP</div>
-                <div className="what-tags">MySql</div>
+                <div className="what-tags">Hybrid</div>
+                <div className="what-tags">Agile Scrum</div>
+                <div className="what-tags">Waterfall</div>
+                <div className="what-tags">PRINCE2</div>
+                <div className="what-tags">PMP</div>
+                <div className="what-tags">MS Project</div>
+                <div className="what-tags">Jira</div>
+                <div className="what-tags">Trello</div>
+                <div className="what-tags">Excel</div>
               </div>
               <div className="what-arrow"></div>
             </div>
@@ -128,22 +126,21 @@ const WhatIDo = () => {
             </div>
             <div className="what-corner"></div>
             <div className="what-content-in">
-              <h3>DESIGN</h3>
+              <h3>GOVERNANCE & RISK</h3>
               <h4>Description</h4>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas
-                quia aliquid laboriosam ducimus sit molestiae
+                Designing and maintaining robust RAID logs, facilitating multi-stakeholder workshops, managing project budgets, and implementing structured governance frameworks (DMAIC, BVT, DEFINE & DESIGN).
               </p>
-              <h5>Skillset & tools</h5>
+              <h5>Governance & analytical skills</h5>
               <div className="what-content-flex">
-                <div className="what-tags">Blender</div>
-                <div className="what-tags">Zbrush</div>
-                <div className="what-tags">UI Design</div>
-                <div className="what-tags">Motion</div>
-                <div className="what-tags">Rigging</div>
-                <div className="what-tags">3D Animation</div>
-                <div className="what-tags">Character Design</div>
-                <div className="what-tags">Modelling</div>
+                <div className="what-tags">RAID Logs</div>
+                <div className="what-tags">RAG Dashboards</div>
+                <div className="what-tags">Budgeting</div>
+                <div className="what-tags">Finance Tracking</div>
+                <div className="what-tags">Lean Six Sigma DMAIC</div>
+                <div className="what-tags">Stakeholder Matrix</div>
+                <div className="what-tags">Risk Mitigation</div>
+                <div className="what-tags">Governance Gates</div>
               </div>
               <div className="what-arrow"></div>
             </div>
