@@ -398,6 +398,8 @@
         background-color: white;
         padding: 0;
         color: black;
+        display: flex !important;
+        flex-direction: row !important;
       }
 
       .no-print {
@@ -409,12 +411,21 @@
         border-radius: 0;
         width: 100%;
         max-width: 100%;
+        display: flex !important;
+        flex-direction: row !important;
       }
 
       .sidebar {
         background-color: #1a365d !important;
         -webkit-print-color-adjust: exact;
         print-color-adjust: exact;
+        width: 30% !important;
+        float: left !important;
+      }
+
+      .main-content {
+        width: 70% !important;
+        float: right !important;
       }
 
       .btn-print {
