@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Asmath Shaik - Professional Resume</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary-color: #1a365d;
+      --primary-light: #2b6cb0;
+      --text-main: #2d3748;
+      --text-muted: #718096;
+      --bg-light: #f7fafc;
+      --border-color: #e2e8f0;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      color: var(--text-main);
+      background-color: #edf2f7;
+      line-height: 1.5;
+      padding: 40px 20px;
+    }
+
+    /* Print Header Controls */
+    .header-controls {
+      max-width: 1000px;
+      margin: 0 auto 20px auto;
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .btn-print {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background-color: var(--primary-color);
+      color: #white;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      font-size: 14px;
+      font-weight: 700;
+      border-radius: 6px;
+      cursor: pointer;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: all 0.2s ease;
+      text-decoration: none;
+    }
+
+    .btn-print:hover {
+      background-color: var(--primary-light);
+      transform: translateY(-1px);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    /* Main Resume Container */
+    .resume-container {
+      max-width: 1000px;
+      margin: 0 auto;
+      background: white;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+      border-radius: 12px;
+      overflow: hidden;
+      display: flex;
+      min-height: 297mm; /* Standard A4 height ratio */
+    }
+
+    /* Left Sidebar */
+    .sidebar {
+      width: 320px;
+      background-color: var(--primary-color);
+      color: white;
+      padding: 40px 30px;
+      display: flex;
+      flex-direction: column;
+      gap: 35px;
+    }
+
+    .profile-section {
+      text-align: center;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+      padding-bottom: 30px;
+    }
+
+    .profile-name {
+      font-size: 26px;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+      line-height: 1.2;
+      margin-bottom: 8px;
+      color: #fff;
+    }
+
+    .profile-title {
+      font-size: 13px;
+      font-weight: 600;
+      color: #90cdf4;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .info-list {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      list-style: none;
+    }
+
+    .info-item {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .info-label {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: #90cdf4;
+      letter-spacing: 0.5px;
+    }
+
+    .info-value {
+      font-size: 13.5px;
+      font-weight: 500;
+      word-break: break-all;
+    }
+
+    .info-value a {
+      color: white;
+      text-decoration: none;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+      transition: border-color 0.2s ease;
+    }
+
+    .info-value a:hover {
+      border-color: white;
+    }
+
+    /* Tooltip Link Styles */
+    .tooltip-link-container {
+      position: relative;
+      display: inline-block;
+    }
+
+    .tooltip-link {
+      color: white !important;
+      text-decoration: none;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .tooltip-link:hover {
+      border-color: white !important;
+      color: #90cdf4 !important;
+    }
+
+    .tooltip-text {
+      visibility: hidden;
+      opacity: 0;
+      width: max-content;
+      background-color: rgba(6, 10, 19, 0.95);
+      color: #fff;
+      text-align: center;
+      border-radius: 4px;
+      padding: 6px 12px;
+      position: absolute;
+      z-index: 100;
+      bottom: 125%; /* Position above the link */
+      left: 50%;
+      transform: translateX(-50%) translateY(4px);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.35);
+      transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+      pointer-events: none;
+      text-transform: none; /* Keep tooltip text case-normal */
+    }
+
+    .tooltip-link-container:hover .tooltip-text {
+      visibility: visible;
+      opacity: 1;
+      transform: translateX(-50%) translateY(0);
+    }
+
+    .sidebar-section-title {
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #90cdf4;
+      border-bottom: 2px solid rgba(255, 255, 255, 0.15);
+      padding-bottom: 8px;
+      margin-bottom: 15px;
+    }
+
+    .skills-group {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .skill-category-title {
+      font-size: 13px;
+      font-weight: 700;
+      color: white;
+      margin-bottom: 8px;
+    }
+
+    .skill-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .skill-badge {
+      background-color: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      padding: 5px 10px;
+      border-radius: 4px;
+      font-size: 11.5px;
+      font-weight: 500;
+    }
+
+    /* Right Main Content */
+    .main-content {
+      flex: 1;
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      background-color: white;
+    }
+
+    .section-title {
+      font-size: 18px;
+      font-weight: 800;
+      color: var(--primary-color);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      border-bottom: 2px solid var(--border-color);
+      padding-bottom: 6px;
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .summary-text {
+      font-size: 14px;
+      color: var(--text-main);
+      line-height: 1.6;
+    }
+
+    /* Experience Timeline */
+    .timeline {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .timeline-item {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .timeline-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+    .role-title {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--primary-color);
+    }
+
+    .company-name {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--primary-light);
+    }
+
+    .timeline-date {
+      font-size: 12.5px;
+      font-weight: 600;
+      color: var(--text-muted);
+      white-space: nowrap;
+    }
+
+    .timeline-bullets {
+      padding-left: 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .timeline-bullets li {
+      font-size: 13px;
+      color: var(--text-main);
+      line-height: 1.5;
+    }
+
+    /* Project Cards */
+    .project-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+    }
+
+    .project-card {
+      background-color: var(--bg-light);
+      border: 1px solid var(--border-color);
+      border-radius: 6px;
+      padding: 15px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .project-name {
+      font-size: 13.5px;
+      font-weight: 700;
+      color: var(--primary-color);
+    }
+
+    .project-desc {
+      font-size: 12.5px;
+      color: var(--text-main);
+      line-height: 1.4;
+    }
+
+    /* Education & Certifications */
+    .edu-cert-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+      list-style: none;
+    }
+
+    .edu-cert-item {
+      background-color: var(--bg-light);
+      border-left: 3px solid var(--primary-light);
+      padding: 10px 15px;
+      font-size: 13px;
+      line-height: 1.4;
+    }
+
+    .edu-cert-name {
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    .edu-cert-issuer {
+      color: var(--text-muted);
+      font-size: 12px;
+      font-weight: 500;
+    }
+
+    /* Additional Info */
+    .additional-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    .additional-item {
+      font-size: 13px;
+      display: flex;
+      gap: 8px;
+    }
+
+    .additional-label {
+      font-weight: 700;
+      color: var(--primary-color);
+    }
+
+    /* Print Media Queries */
+    @media print {
+      body {
+        background-color: white;
+        padding: 0;
+        color: black;
+      }
+
+      .no-print {
+        display: none !important;
+      }
+
+      .resume-container {
+        box-shadow: none;
+        border-radius: 0;
+        width: 100%;
+        max-width: 100%;
+      }
+
+      .sidebar {
+        background-color: #1a365d !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      .btn-print {
+        display: none !important;
+      }
+    }
+
+    /* Responsive Queries */
+    @media (max-width: 850px) {
+      body {
+        padding: 15px;
+      }
+
+      .resume-container {
+        flex-direction: column;
+      }
+
+      .sidebar {
+        width: 100%;
+        padding: 30px 20px;
+      }
+
+      .main-content {
+        padding: 30px 20px;
+      }
+
+      .project-grid, .edu-cert-list, .additional-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top PDF Control Buttons -->
+  <div class="header-controls no-print">
+    <a href="/resume.pdf" download="Asmath_Shaik_Resume.pdf" class="btn-print">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+      Download PDF Resume
+    </a>
+  </div>
+
+  <!-- Resume Container -->
+  <div class="resume-container">
+    
+    <!-- Left Sidebar Column -->
+    <div class="sidebar">
+      
+      <!-- Profile Header -->
+      <div class="profile-section">
+        <h1 class="profile-name">ASMATH SHAIK</h1>
+        <div class="profile-title">Project Manager</div>
+      </div>
+
+      <!-- Contact Info Section -->
+      <div>
+        <h2 class="sidebar-section-title">Contact</h2>
+        <ul class="info-list">
+          <li class="info-item">
+            <span class="info-label">Location</span>
+            <span class="info-value">Coventry, West Midlands</span>
+          </li>
+          <li class="info-item">
+            <span class="info-label">Phone</span>
+            <span class="info-value">+44 7482 714979</span>
+          </li>
+          <li class="info-item">
+            <span class="info-label">Email</span>
+            <span class="info-value"><a href="mailto:asmath2909@gmail.com">asmath2909@gmail.com</a></span>
+          </li>
+          <li class="info-item">
+            <span class="info-label">LinkedIn</span>
+            <span class="info-value">
+              <div class="tooltip-link-container">
+                <a href="https://linkedin.com/in/ashaik-shaik-ab2914364" target="_blank" rel="noopener noreferrer" class="tooltip-link">
+                  🔗 LINKEDIN
+                </a>
+                <span class="tooltip-text">Visit my LinkedIn profile</span>
+              </div>
+            </span>
+          </li>
+          <li class="info-item">
+            <span class="info-label">Portfolio</span>
+            <span class="info-value">
+              <div class="tooltip-link-container">
+                <a href="https://snazzy-bubblegum-2d88da.netlify.app" target="_blank" rel="noopener noreferrer" class="tooltip-link">
+                  🔗 PORTFOLIO
+                </a>
+                <span class="tooltip-text">Visit my portfolio</span>
+              </div>
+            </span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Core Skills Section -->
+      <div>
+        <h2 class="sidebar-section-title">Core Skills</h2>
+        <div class="skills-group">
+          
+          <div>
+            <div class="skill-category-title">Methodologies & Governance</div>
+            <div class="skill-tags">
+              <span class="skill-badge">Hybrid</span>
+              <span class="skill-badge">Waterfall</span>
+              <span class="skill-badge">Agile</span>
+              <span class="skill-badge">PRINCE2</span>
+              <span class="skill-badge">PMP</span>
+              <span class="skill-badge">Lean Six Sigma</span>
+              <span class="skill-badge">DMAIC</span>
+              <span class="skill-badge">RAG</span>
+              <span class="skill-badge">BVT</span>
+            </div>
+          </div>
+
+          <div>
+            <div class="skill-category-title">Tools & Software</div>
+            <div class="skill-tags">
+              <span class="skill-badge">MS Project</span>
+              <span class="skill-badge">Jira</span>
+              <span class="skill-badge">Trello</span>
+              <span class="skill-badge">SharePoint</span>
+              <span class="skill-badge">Advanced Excel</span>
+              <span class="skill-badge">PowerPoint</span>
+            </div>
+          </div>
+
+          <div>
+            <div class="skill-category-title">Soft Skills</div>
+            <div class="skill-tags">
+              <span class="skill-badge">Stakeholder Empathy</span>
+              <span class="skill-badge">Coordination</span>
+              <span class="skill-badge">Risk Management</span>
+              <span class="skill-badge">Adaptability</span>
+              <span class="skill-badge">Communication</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Additional Details -->
+      <div>
+        <h2 class="sidebar-section-title">Information</h2>
+        <ul class="info-list">
+          <li class="info-item">
+            <span class="info-label">DBS Status</span>
+            <span class="info-value">Enhanced (Update Service)</span>
+          </li>
+          <li class="info-item">
+            <span class="info-label">Driving Licence</span>
+            <span class="info-value">Full UK Driving Licence</span>
+          </li>
+          <li class="info-item">
+            <span class="info-label">Languages</span>
+            <span class="info-value">English (Fluent)</span>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- Right Main Column -->
+    <div class="main-content">
+      
+      <!-- Summary -->
+      <div>
+        <h2 class="section-title">Professional Summary</h2>
+        <p class="summary-text">
+          Project Management professional with hands-on experience delivering hybrid (Waterfall + Agile) initiatives across regulated, multi-stakeholder environments. Currently managing a four-product policy amendment project at London Success Academy, owning budgets, RAID logs, and governance gates from definition through UAT sign-off. Certified in PRINCE2 Foundation, PMP, Agile Scrum, and Lean Six Sigma Green Belt. Skilled at translating ambiguous requirements into structured plans, tracking risk proactively, and keeping cross-functional teams aligned to deadline and budget.
+        </p>
+      </div>
+
+      <!-- Experience -->
+      <div>
+        <h2 class="section-title">Professional Experience</h2>
+        <div class="timeline">
+          
+          <div class="timeline-item">
+            <div class="timeline-header">
+              <div>
+                <span class="role-title">Project Management Intern</span>
+                <span class="company-name"> | London Success Academy</span>
+              </div>
+              <span class="timeline-date">June 2026 – Present</span>
+            </div>
+            <ul class="timeline-bullets">
+              <li>Leading a £15,950 Policy Information Letter amendment project across 4 banking products (CM, Halifax, SW, Barclays), cutting customer complaint volume through a structured 4-sprint hybrid delivery plan.</li>
+              <li>Built and maintained RAID logs and RAG status dashboards, identifying and mitigating delivery risks weekly to keep all 4 sprints on schedule and within budget.</li>
+              <li>Facilitated stakeholder workshops with Clients, Business Analysts, SMEs, and Build/Test teams, documenting minutes and action items that drove on-time decision-making at each governance gate.</li>
+              <li>Applied DEFINE & DESIGN and DEVELOP & TEST (BVT) governance frameworks, ensuring 100% of deliverables met structured sign-off criteria before progressing phases.</li>
+              <li>Consolidated Budget, Timeline, Finance, and Stakeholder Matrix trackers from Excel into unified Word reports, improving leadership visibility into project health.</li>
+              <li>Defined User Acceptance Testing (UAT) criteria and tracked client sign-off, ensuring delivery readiness across all 4 product workstreams.</li>
+            </ul>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-header">
+              <div>
+                <span class="role-title">Assistant to Manager (Volunteer)</span>
+                <span class="company-name"> | Carriers of Hope</span>
+              </div>
+              <span class="timeline-date">Sep 2025 – May 2026</span>
+            </div>
+            <ul class="timeline-bullets">
+              <li>Supported various organisational projects, collaborating with managers at different levels to plan and execute community initiatives effectively.</li>
+              <li>Maintained accurate activity and volunteer records, ensuring data integrity across all programme operations.</li>
+              <li>Facilitated volunteer induction and onboarding, working with the Client Connection Team and Volunteer Manager to ensure a seamless transition for new volunteers.</li>
+              <li>Worked intensively with ASRAM and BAME communities, supporting asylum seekers and refugees, delivering a high standard of customer service and building trust with vulnerable groups.</li>
+            </ul>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-header">
+              <div>
+                <span class="role-title">Project Community Digital Volunteer</span>
+                <span class="company-name"> | Coventry Independent Advice Services</span>
+              </div>
+              <span class="timeline-date">2025</span>
+            </div>
+            <ul class="timeline-bullets">
+              <li>Delivered one-to-one digital support sessions, helping community members build digital literacy and confidently access essential online services.</li>
+              <li>Partnered with management to plan and execute community programmes supporting vulnerable and underserved residents.</li>
+            </ul>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-header">
+              <div>
+                <span class="role-title">Project Manager Trainee</span>
+                <span class="company-name"> | Fortray–Simplilearn, Kreativstorm</span>
+              </div>
+              <span class="timeline-date">2023 – 2024</span>
+            </div>
+            <ul class="timeline-bullets">
+              <li>Developed and executed project plans, organising documentation for streamlined team access and audit readiness.</li>
+              <li>Conducted risk assessments and implemented mitigation strategies, reducing the likelihood of schedule slippage.</li>
+              <li>Participated in stakeholder meetings to report progress and align expectations across project phases.</li>
+            </ul>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-header">
+              <div>
+                <span class="role-title">Project Administrator / IT TA Volunteer</span>
+                <span class="company-name"> | St. Francis Employability</span>
+              </div>
+              <span class="timeline-date">2023</span>
+            </div>
+            <ul class="timeline-bullets">
+              <li>Managed data entry and document control, scanning and uploading records to SharePoint to support team access.</li>
+              <li>Built PowerPoint presentations for staff and supported students through assessment completion.</li>
+            </ul>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-header">
+              <div>
+                <span class="role-title">Project Administrator Volunteer</span>
+                <span class="company-name"> | Growkids</span>
+              </div>
+              <span class="timeline-date">2022 – 2023</span>
+            </div>
+            <ul class="timeline-bullets">
+              <li>Maintained donor, volunteer, and participant records, supporting accurate programme reporting.</li>
+              <li>Recruited, trained, and coordinated volunteers, strengthening programme delivery capacity.</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Project Portfolio -->
+      <div>
+        <h2 class="section-title">Project Portfolio</h2>
+        <div class="project-grid">
+          
+          <div class="project-card">
+            <span class="project-name">Policy Information Letter Amendment</span>
+            <span class="project-desc">Delivered a 4-week project amending policy letters across 4 banking products, reducing complaints and improving compliance accuracy.</span>
+          </div>
+
+          <div class="project-card">
+            <span class="project-name">Smart Weather App</span>
+            <span class="project-desc">Managed product backlog and sprint cycles end-to-end using Agile Scrum framework and Jira.</span>
+          </div>
+
+          <div class="project-card">
+            <span class="project-name">Improving Hospital POS</span>
+            <span class="project-desc">Applied Lean Six Sigma DMAIC methodology to streamline and optimize point-of-sale processes in a healthcare setting.</span>
+          </div>
+
+          <div class="project-card">
+            <span class="project-name">Accenture Job Simulation</span>
+            <span class="project-desc">Completed a virtual job simulation focused on Agile delivery, sprints, and stakeholder communication.</span>
+          </div>
+
+          <div class="project-card">
+            <span class="project-name">Siemens Project Manager Simulation</span>
+            <span class="project-desc">Simulated end-to-end project management using Waterfall governance and scheduling controls.</span>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Certifications -->
+      <div>
+        <h2 class="section-title">Education & Certifications</h2>
+        <ul class="edu-cert-list">
+          <li class="edu-cert-item">
+            <div class="edu-cert-name">Master in Project Management</div>
+            <div class="edu-cert-issuer">Fortray – Simplilearn</div>
+          </li>
+          <li class="edu-cert-item">
+            <div class="edu-cert-name">Google Project Management Specialization</div>
+            <div class="edu-cert-issuer">Google / Coursera</div>
+          </li>
+          <li class="edu-cert-item">
+            <div class="edu-cert-name">PRINCE2® Foundation</div>
+            <div class="edu-cert-issuer">PeopleCert UK</div>
+          </li>
+          <li class="edu-cert-item">
+            <div class="edu-cert-name">PMP® (Project Management Professional)</div>
+            <div class="edu-cert-issuer">Project Management Institute / Simplilearn</div>
+          </li>
+          <li class="edu-cert-item">
+            <div class="edu-cert-name">Agile Scrum Master</div>
+            <div class="edu-cert-issuer">Simplilearn</div>
+          </li>
+          <li class="edu-cert-item">
+            <div class="edu-cert-name">Lean Six Sigma Green Belt</div>
+            <div class="edu-cert-issuer">Simplilearn</div>
+          </li>
+          <li class="edu-cert-item">
+            <div class="edu-cert-name">Microsoft Project 2021</div>
+            <div class="edu-cert-issuer">Simplilearn</div>
+          </li>
+          <li class="edu-cert-item">
+            <div class="edu-cert-name">MBA (Master of Business Administration)</div>
+            <div class="edu-cert-issuer">Osmania University, India</div>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+  </div>
+
+</body>
+</html>

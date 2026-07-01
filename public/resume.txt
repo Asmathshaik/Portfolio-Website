@@ -50,7 +50,6 @@ PROJECT PORTFOLIO
 - Policy Information Letter Amendment (Hybrid: Waterfall + Agile) — Delivered a 4-week project amending policy letters across 4 products, reducing complaints and improving accuracy.
 - Smart Weather App (Agile Scrum, Jira) — Managed product backlog and sprint cycles end-to-end.
 - Improving Hospital POS (Lean DMAIC) — Applied Lean Six Sigma to streamline point-of-sale processes in a hospital setting.
-- Travelperk Project (Hybrid) — Managed a travel platform project using blended Waterfall/Agile delivery.
 - Accenture Job Simulation (Agile) — Completed a virtual job simulation focused on Agile project delivery.
 - Siemens Project Manager Simulation (Waterfall) — Simulated end-to-end project management using Waterfall methodology.
 

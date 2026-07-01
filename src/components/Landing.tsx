@@ -1,6 +1,5 @@
 import { useState, useEffect, useRef } from "react";
 import { FaAward, FaPlay } from "react-icons/fa6";
-import { TbNotes } from "react-icons/tb";
 import { IoVolumeHighOutline, IoVolumeMuteOutline } from "react-icons/io5";
 import "./styles/Landing.css";
 
@@ -80,13 +79,31 @@ const Landing = () => {
               </div>
             </div>
 
-            <div className="hero-actions">
-              <a href="/resume.txt" target="_blank" rel="noopener noreferrer" className="btn-primary">
-                <TbNotes /> View UK Standard CV
+            <div className="hero-actions" style={{ display: "flex", gap: "15px", alignItems: "center", flexWrap: "wrap" }}>
+              <a href="/resume.html" target="_blank" rel="noopener noreferrer" className="btn-hero-match">
+                📄 View Resume
               </a>
-              <a href="#work" className="btn-secondary">
+              
+              <a href="#work" className="btn-hero-match">
                 View Projects
               </a>
+
+              <div className="dropdown-container">
+                <button className="btn-hero-match dropdown-trigger" type="button">
+                  Select ▼
+                </button>
+                <div className="dropdown-menu">
+                  <a href="mailto:asmath2909@gmail.com" className="dropdown-item">
+                    💬 Leave a Message
+                  </a>
+                  <a href="mailto:asmath2909@gmail.com?subject=Book%20a%20Call" className="dropdown-item">
+                    📅 Book a Call
+                  </a>
+                  <a href="https://wa.me/447482714979" target="_blank" rel="noopener noreferrer" className="dropdown-item">
+                    💬 Let's Chat
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
 
