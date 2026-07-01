@@ -1,70 +1,79 @@
 ASMATH SHAIK
-Coventry, West Midlands | +44 7482 714979 | asmath2909@gmail.com | linkedin.com/in/asmath-shaik | [Portfolio Link]
+Coventry, West Midlands | +44 7482 714979 | asmath2909@gmail.com | linkedin.com/in/ashaik-shaik-ab2914364 | https://asmath-shaik.netlify.app
 
 PROFESSIONAL PROFILE
-A highly skilled and certified Project Management Professional (PMP) with extensive experience delivering hybrid (Waterfall & Agile) initiatives within regulated, multi-stakeholder environments. Proven track record of managing project life cycles from definition through to User Acceptance Testing (UAT) sign-off, governing budgets, maintaining robust RAID logs, and ensuring seamless cross-functional team coordination. Certified Scrum Master and Lean Six Sigma Green Belt, adept at translating complex requirements into structured, low-risk project delivery plans.
+A highly skilled and certified Project Management Professional (PMP) with extensive experience delivering hybrid (Waterfall & Agile) initiatives within regulated, multi-stakeholder environments. Currently managing a four-product policy amendment project at London Success Academy, owning budgets, RAID logs, and governance gates from definition through UAT sign-off. Certified in PRINCE2 Foundation, PMP, Agile Scrum, and Lean Six Sigma Green Belt. Skilled at translating ambiguous requirements into structured plans, tracking risk proactively, and keeping cross-functional teams aligned to deadline and budget.
 
-CORE COMPETENCIES
-- Hybrid Project Delivery (Waterfall + Agile)
-- Risk & Issue Management (RAID Logs)
-- Budget & Cost Management
-- Stakeholder Engagement & Communications
-- Governance, Quality Gates & Compliance
-- Agile Scrum & Sprint Management
-- Lean Six Sigma DMAIC Process Optimization
-- Project Scheduling & Milestones (MS Project, Jira, Trello)
+CORE SKILLS
+
+Methodologies & Governance       Tools & Software                 Soft Skills
+--------------------------       ----------------                 -----------
+Hybrid (Waterfall/Agile)         MS Project, Jira, Trello         Stakeholder Empathy
+PRINCE2, PMP                     SharePoint, Advanced Excel       Cross-Functional Coordination
+Lean Six Sigma (DMAIC)           PowerPoint                       Risk Management
+RAG/BVT                                                           Adaptability
 
 PROFESSIONAL EXPERIENCE
 
 Project Management Intern | London Success Academy, UK | June 2026 – Present
-- Spearheading a £15,950 Policy Information Letter amendment project spanning four major banking products (CM, Halifax, SW, Barclays).
-- Formulated and executed a structured 4-sprint hybrid delivery plan, resolving inaccurate policy data and significantly reducing customer complaint volumes.
-- Implementing weekly risk reviews by designing and maintaining RAID logs and RAG status dashboards, keeping workstreams on schedule and within budget.
-- Facilitating weekly stakeholder workshops with clients, Business Analysts, SMEs, and Build/Test teams, driving prompt decision-making at critical governance gates.
-- Managing the transition from Excel tracking tools to unified business reporting, enhancing transparency and alignment for senior leadership.
-- Defining strict User Acceptance Testing (UAT) criteria and securing client sign-off across all product streams to ensure operational readiness.
+- Leading a £15,950 Policy Information Letter amendment project across 4 banking products (CM, Halifax, SW, Barclays), cutting customer complaint volume by resolving inaccurate policy information through a structured 4-sprint hybrid (Waterfall + Agile) delivery plan.
+- Built and maintained RAID logs and RAG status dashboards, identifying and mitigating delivery risks weekly to keep all 4 sprints on schedule and within budget.
+- Facilitated stakeholder workshops with Clients, Business Analysts, SMEs, and Build/Test teams, documenting minutes and action items that drove on-time decision-making at each governance gate.
+- Applied DEFINE & DESIGN and DEVELOP & TEST (BVT) governance frameworks, ensuring 100% of deliverables met structured sign-off criteria before progressing phases.
+- Consolidated Budget, Timeline, Finance, and Stakeholder Matrix trackers from Excel into unified Word reports, improving leadership visibility into project health.
+- Defined User Acceptance Testing (UAT) criteria and tracked client sign-off, ensuring delivery readiness across all 4 product workstreams.
 
-Assistant to Manager (Volunteer) | Carriers of Hope, UK | 2025 – May 2026
-- Coordinated scheduling and communications for community projects, ensuring multiple concurrent initiatives completed on schedule.
-- Maintained accurate activity records and digital program data on SharePoint, preserving high levels of data integrity.
-- Managed logistics and resource allocation for community initiatives, working closely with managers to streamline volunteer operations.
+Assistant to Manager (Volunteer) | Carriers of Hope, UK | Sep 2025 – May 2026
+- Supported various organisational projects, collaborating with managers at different levels to plan and execute community initiatives effectively.
+- Maintained accurate activity and volunteer records, ensuring data integrity across all programme operations.
+- Facilitated volunteer induction and onboarding, working with the Client Connection Team and Volunteer Manager to ensure a seamless transition for new volunteers.
+- Worked intensively with ASRAM and BAME communities, supporting asylum seekers and refugees, delivering a high standard of customer service and building trust with vulnerable groups.
 
 Project Community Digital Volunteer | Coventry Independent Advice Services, UK | 2025
-- Managed and delivered one-to-one digital support programs, supporting vulnerable community members in accessing essential services online.
-- Partnered with program coordinators to plan and launch local digital inclusion initiatives.
+- Delivered one-to-one digital support sessions, helping community members build digital literacy and confidently access essential online services.
+- Partnered with management to plan and execute community programmes supporting vulnerable and underserved residents.
 
-Project Manager Trainee | Fortray – Simplilearn / Kreativstorm | 2023 – 2024
-- Authored detailed project initiation documentation (PID) and work breakdown structures (WBS) for simulation projects.
-- Conducted quantitative risk assessments and created contingency plans, reducing project schedule variance.
+Project Manager Trainee | Fortray–Simplilearn, Mplaza Training, Kreativstorm | 2023 – 2024
+- Developed and executed project plans, organising documentation for streamlined team access and audit readiness.
+- Conducted risk assessments and implemented mitigation strategies, reducing the likelihood of schedule slippage.
+- Participated in stakeholder meetings to report progress and align expectations across project phases.
 
 Project Administrator / IT TA Volunteer | St. Francis Employability, UK | 2023
-- Governed data entry, scanning, and secure document upload to SharePoint, establishing high standards of data security.
+- Managed data entry and document control, scanning and uploading records to SharePoint to support team access.
+- Built PowerPoint presentations for staff and supported students through assessment completion.
 
 Project Administrator Volunteer | Growkids, UK | 2022 – 2023
-- Administered donor, volunteer, and participant records on SharePoint, driving high standards of program reporting.
-- Coordinated recruitment and training sessions for program volunteers.
+- Maintained donor, volunteer, and participant records, supporting accurate programme reporting.
+- Recruited, trained, and coordinated volunteers, strengthening programme delivery capacity.
 
-EDUCATION
+PROJECT PORTFOLIO
+- Policy Information Letter Amendment (Hybrid: Waterfall + Agile) — Delivered a 4-week project amending policy letters across 4 products, reducing complaints and improving accuracy.
+- Smart Weather App (Agile Scrum, Jira) — Managed product backlog and sprint cycles end-to-end.
+- Improving Hospital POS (Lean DMAIC) — Applied Lean Six Sigma to streamline point-of-sale processes in a hospital setting.
+- Travelperk Project (Hybrid) — Managed a travel platform project using blended Waterfall/Agile delivery.
+- Accenture Job Simulation (Agile) — Completed a virtual job simulation focused on Agile project delivery.
+- Siemens Project Manager Simulation (Waterfall) — Simulated end-to-end project management using Waterfall methodology.
 
+EDUCATION & CERTIFICATIONS
 - Google Project Management Specialization | Google / Coursera
 - Master in Project Management | Fortray – Simplilearn
+- PRINCE2® Foundation | PeopleCert UK
+- PMP® (Project Management Professional) | Simplilearn / PMI
+- Agile Scrum Master | Simplilearn
+- Lean Six Sigma Green Belt | Simplilearn
+- Microsoft Project 2021 | Simplilearn
 - MBA (Master of Business Administration) | Osmania University, India
 - BCA (Bachelor in Computer Application) | Osmania University, India
 - CIPD HR, Level 3 | BePro
 - Intel AI in Current Workforce, Level 3 | NETCOM
 - Diploma in IT, Level 2 | City and Guilds
-
-KEY CERTIFICATIONS
-
-- PMP® (Project Management Professional) | Project Management Institute / Simplilearn
-- PRINCE2® Foundation | PeopleCert
-- Agile Scrum Master | Scrum Alliance / Simplilearn
-- Lean Six Sigma Green Belt | Simplilearn
-- Microsoft Project 2021 | Simplilearn
 - Digital Skills & AI | Simplilearn
+- Digital Transformation | Simplilearn
+- Digital Marketing for Leaders | Simplilearn
+- Safeguarding, Level 2 | Pet-xi
+- GCSE Maths & English | City and Guilds
 
 ADDITIONAL INFORMATION
-
 - DBS: Enhanced DBS on the Update Service
 - Driving Licence: Full UK Driving Licence
 - Languages: English (Fluent)
