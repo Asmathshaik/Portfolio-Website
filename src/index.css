@@ -474,20 +474,21 @@ a:hover {
   padding-top: 8px;
 }
 
-/* SVG Diagram containers */
-.svg-diagram-container {
+.mini-diagram-img-container,
+.diagram-img-container {
   width: 100%;
   margin-top: 6px;
 }
 
-.svg-diagram-wide {
-  width: 100%;
+/* Wide image variants — shorter height since they span full width */
+.methodology-card-image-wide {
+  height: 120px;
+  object-fit: cover;
 }
 
-.inline-svg-diagram {
-  width: 100%;
-  height: auto;
-  display: block;
+.skills-card-image-wide {
+  height: 120px;
+  object-fit: cover;
 }
 
 /* Full-width cards that span both columns in 2-col grids */

@@ -114,9 +114,8 @@ const Certifications = () => {
   return (
     <div className="cert-section section-container" id="certifications">
       <div className="cert-container">
-        <h2>
-          Professional <span>&</span>
-          <br /> Certifications
+        <h2 style={{ textAlign: "center" }}>
+          Professional <span>&</span> Certifications
         </h2>
 
         {/* Folder Card Trigger */}
