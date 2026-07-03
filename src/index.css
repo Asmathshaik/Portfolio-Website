@@ -498,7 +498,7 @@ a:hover {
 .diagram-card-full {
   grid-column: 1 / -1;
 }
-}
+
 
 .method-card:hover {
   border-color: rgba(59, 130, 246, 0.2);
