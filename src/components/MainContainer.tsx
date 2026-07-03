@@ -1,6 +1,7 @@
 import { lazy, Suspense, useEffect, useState } from "react";
 import About from "./About";
 import Career from "./Career";
+import Certifications from "./Certifications";
 import Contact from "./Contact";
 import Cursor from "./Cursor";
 import Landing from "./Landing";
@@ -38,6 +39,7 @@ const MainContainer = () => {
       <About />
       <WhatIDo />
       <Career />
+      <Certifications />
       <Work />
       <Suspense fallback={<div style={{ textAlign: 'center', padding: '50px', color: '#94a3b8' }}>Loading Toolkit...</div>}>
         <TechStack />
