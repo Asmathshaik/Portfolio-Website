@@ -19,6 +19,75 @@
   -webkit-text-fill-color: transparent;
 }
 
+/* ── Let's Connect Banner ── */
+.lets-connect-banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  background: rgba(15, 23, 42, 0.5);
+  border: 1px solid rgba(59, 130, 246, 0.15);
+  border-radius: 18px;
+  padding: 22px 36px;
+  margin-bottom: 40px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  animation: connectPulse 4s ease-in-out infinite;
+}
+
+.connect-emoji {
+  font-size: 38px;
+  display: inline-block;
+  animation: waveHand 2.5s ease-in-out infinite;
+  transform-origin: 70% 70%;
+}
+
+.connect-emoji.connect-sparkle {
+  animation: sparkleFloat 3s ease-in-out infinite;
+}
+
+@keyframes waveHand {
+  0%, 100% { transform: rotate(0deg); }
+  15% { transform: rotate(14deg); }
+  30% { transform: rotate(-8deg); }
+  45% { transform: rotate(14deg); }
+  60% { transform: rotate(-4deg); }
+  75% { transform: rotate(10deg); }
+  85% { transform: rotate(0deg); }
+}
+
+@keyframes sparkleFloat {
+  0%, 100% { transform: translateY(0) scale(1); opacity: 1; }
+  50% { transform: translateY(-5px) scale(1.15); opacity: 0.8; }
+}
+
+@keyframes connectPulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(59, 130, 246, 0); }
+  50% { box-shadow: 0 0 20px 2px rgba(59, 130, 246, 0.08); }
+}
+
+.connect-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.connect-title {
+  font-size: 22px;
+  font-weight: 800;
+  color: #f8fafc;
+  letter-spacing: -0.3px;
+}
+
+.connect-subtitle {
+  font-size: 14px;
+  font-weight: 500;
+  color: #94a3b8;
+  letter-spacing: 0.2px;
+}
+
+/* ── Contact Grid ── */
 .contact-flex {
   display: grid;
   grid-template-columns: 1fr;
@@ -42,6 +111,7 @@
   transition: all 0.3s ease;
   display: flex;
   flex-direction: column;
+  gap: 24px;
 }
 
 .contact-box:hover {
@@ -50,30 +120,65 @@
   box-shadow: 0 8px 32px 0 rgba(59, 130, 246, 0.12);
 }
 
-.contact-box h4 {
+/* ── Contact Item Row (icon + content) ── */
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.contact-icon {
+  font-size: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  background: rgba(59, 130, 246, 0.08);
+  border: 1px solid rgba(59, 130, 246, 0.12);
+  transition: all 0.3s ease;
+  filter: drop-shadow(0 2px 6px rgba(59, 130, 246, 0.15));
+}
+
+.contact-item:hover .contact-icon {
+  background: rgba(59, 130, 246, 0.14);
+  border-color: rgba(59, 130, 246, 0.25);
+  transform: scale(1.08);
+  filter: drop-shadow(0 4px 12px rgba(59, 130, 246, 0.25));
+}
+
+.contact-item-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.contact-item-content h4 {
   font-size: 13px;
   text-transform: uppercase;
   color: #3b82f6;
   font-weight: 700;
   letter-spacing: 1.5px;
-  margin: 0 0 10px 0;
+  margin: 0 0 6px 0;
 }
 
-.contact-box p {
+.contact-item-content p {
   font-size: 16px;
   color: var(--textColor);
-  margin: 0 0 20px 0;
+  margin: 0;
   font-weight: 500;
 }
 
-.contact-box p a {
+.contact-item-content p a {
   transition: color 0.25s ease;
 }
 
-.contact-box p a:hover {
+.contact-item-content p a:hover {
   color: #60a5fa;
 }
 
+/* ── Social Links ── */
 a.contact-social {
   font-size: 16px;
   font-weight: 600;
@@ -96,6 +201,7 @@ a.contact-social svg {
   font-size: 14px;
 }
 
+/* ── Footer Box ── */
 .contact-box h2 {
   font-size: 18px;
   font-weight: 500;
