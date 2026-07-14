@@ -2,7 +2,7 @@ ASMATH SHAIK
 Coventry, West Midlands | +44 7482 714979 | asmath2909@gmail.com | linkedin.com/in/ashaik-shaik-ab2914364 | https://snazzy-bubblegum-2d88da.netlify.app
 
 PROFESSIONAL PROFILE
-A highly skilled and certified Project Management Professional (PMP) with extensive experience delivering hybrid (Waterfall & Agile) initiatives within regulated, multi-stakeholder environments. Currently managing a four-product policy amendment project at London Success Academy, owning budgets, RAID logs, and governance gates from definition through UAT sign-off. Certified in PRINCE2 Foundation, PMP, Agile Scrum, and Lean Six Sigma Green Belt. Skilled at translating ambiguous requirements into structured plans, tracking risk proactively, and keeping cross-functional teams aligned to deadline and budget.
+A highly skilled and certified Project Management Professional (PMP) with extensive experience delivering hybrid (Waterfall & Agile) initiatives within regulated, multi-stakeholder environments. Currently leading a £4M legacy-to-cloud transformation programme and managing a four-product policy amendment project at London Success Academy, owning budgets, RAID logs, and governance frameworks from definition through delivery. Certified in PRINCE2 Foundation, PMP, Agile Scrum, and Lean Six Sigma Green Belt. Skilled at translating ambiguous requirements into structured plans, tracking risk proactively, and keeping cross-functional teams aligned to deadline and budget.
 
 CORE SKILLS
 
@@ -16,12 +16,21 @@ RAG/BVT                                                           Adaptability
 PROFESSIONAL EXPERIENCE
 
 Project Management Intern | London Success Academy, UK | June 2026 – Present
-- Leading a £15,950 Policy Information Letter amendment project across 4 banking products (CM, Halifax, SW, Barclays), cutting customer complaint volume by resolving inaccurate policy information through a structured 4-sprint hybrid (Waterfall + Agile) delivery plan.
-- Built and maintained RAID logs and RAG status dashboards, identifying and mitigating delivery risks weekly to keep all 4 sprints on schedule and within budget.
-- Facilitated stakeholder workshops with Clients, Business Analysts, SMEs, and Build/Test teams, documenting minutes and action items that drove on-time decision-making at each governance gate.
-- Applied DEFINE & DESIGN and DEVELOP & TEST (BVT) governance frameworks, ensuring 100% of deliverables met structured sign-off criteria before progressing phases.
-- Consolidated Budget, Timeline, Finance, and Stakeholder Matrix trackers from Excel into unified Word reports, improving leadership visibility into project health.
-- Defined User Acceptance Testing (UAT) criteria and tracked client sign-off, ensuring delivery readiness across all 4 product workstreams.
+
+  * Project 1: SecureLife Insurance Ltd Transformation Programme (Value: £4M | Timeline: 4 Weeks)
+    - Scope & Delivery: Leading a £4 million legacy-to-cloud transformation programme for one of the UK's largest insurance providers, replacing a 20-year-old legacy claims system with a cloud-based platform and coordinating 6 third-party vendors to meet a strict 28-day deadline.
+    - Stakeholder & Change Management: Managing 12 stakeholder groups—including Board-level executives and FCA regulators—while overseeing the training of 500 end-users to ensure smooth operational adoption.
+    - Agile Governance: Established a PRINCE2 Agile governance framework with daily Highlight Reports to the Project Board and maintained strict controls of the £4M budget, cost controls, and contingency governance.
+    - Risk & Escalation Management: Implemented a robust risk management process identifying 10 'Project Killer' risks, utilizing 1-hour escalation SLAs to mitigate roadblocks.
+    - Outcomes & Benefits Realisation: Delivered 99.9% system uptime (saving £700k/week in outage losses), achieved full FCA regulatory compliance (avoiding a £500k fine), reduced claims processing from 5 days to under 2 hours, and automated 70% of manual operations, delivering a ~7-month payback and £31M net benefit over 5 years.
+
+  * Project 2: Policy Information Letter Amendment Project (Value: £15,950 | Timeline: 4 Weeks)
+    - Scope & Delivery: Leading a Policy Information Letter amendment project across 4 banking products (CM, Halifax, SW, Barclays), cutting customer complaint volume through a structured 4-sprint hybrid delivery plan.
+    - Risk & Issue Management: Built and maintained RAID logs and RAG status dashboards, identifying and mitigating delivery risks weekly to keep all 4 sprints on schedule and within budget.
+    - Stakeholder Collaboration: Facilitated stakeholder workshops with Clients, Business Analysts, SMEs, and Build/Test teams, documenting minutes and action items that drove on-time decision-making at each governance gate.
+    - Governance Framework: Applied DEFINE & DESIGN and DEVELOP & TEST (BVT) governance frameworks, ensuring 100% of deliverables met structured sign-off criteria before progressing phases.
+    - Reporting & Documentation: Consolidated Budget, Timeline, Finance, and Stakeholder Matrix trackers from Excel into unified Word reports, improving leadership visibility into project health.
+    - Testing & Readiness: Defined User Acceptance Testing (UAT) criteria and tracked client sign-off, ensuring delivery readiness across all 4 product workstreams.
 
 Assistant to Manager (Volunteer) | Carriers of Hope, UK | Sep 2025 – May 2026
 - Supported various organisational projects, collaborating with managers at different levels to plan and execute community initiatives effectively.
@@ -47,6 +56,7 @@ Project Administrator Volunteer | Growkids, UK | 2022 – 2023
 - Recruited, trained, and coordinated volunteers, strengthening programme delivery capacity.
 
 PROJECT PORTFOLIO
+- SecureLife Insurance Transformation (PRINCE2 Agile) — Led a £4M, 4-week legacy-to-cloud transformation replacing a legacy claims system, managing 6 vendors, 12 stakeholder groups, and FCA regulatory compliance.
 - Policy Information Letter Amendment (Hybrid: Waterfall + Agile) — Delivered a 4-week project amending policy letters across 4 products, reducing complaints and improving accuracy.
 - Smart Weather App (Agile Scrum, Jira) — Managed product backlog and sprint cycles end-to-end.
 - Improving Hospital POS (Lean DMAIC) — Applied Lean Six Sigma to streamline point-of-sale processes in a hospital setting.

@@ -14,13 +14,13 @@ const Career = () => {
             <div className="career-dot"></div>
             <div className="career-info-in">
               <div className="career-role">
-                <h4>Project Management Intern</h4>
+                <h4>Project Management</h4>
                 <h5>London Success Academy</h5>
               </div>
               <h3>NOW</h3>
             </div>
             <p>
-              Leading a £15,950 Policy Information Letter amendment project across 4 banking products (CM, Halifax, SW, Barclays) using a structured 4-sprint hybrid delivery plan, maintaining weekly RAID logs and RAG dashboards.
+              Leading a £4M, 4-week transformation program for SecureLife Insurance Ltd replacing legacy claims systems, coordinating 6 vendors, managing 12 stakeholder groups, and delivering £31M net benefit over 5 years. Also managing a four-product policy amendment project across 4 major UK banking products.
             </p>
           </div>
           <div className="career-info-box">

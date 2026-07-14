@@ -4,6 +4,13 @@ import WorkImage from "./WorkImage";
 const Work = () => {
   const projects = [
     {
+      title: "SecureLife Insurance Transformation Programme",
+      category: "PRINCE2 Agile Transformation",
+      description: "Leading a £4M, 28-day legacy-to-cloud transformation for SecureLife Insurance Ltd, replacing a 20-year-old claims system. Coordinated 6 vendors and managed 12 stakeholder groups (including Board-level & FCA regulators) to achieve 99.9% uptime (saving £700k/week), full compliance (saving a £500k fine), and automated 70% of operations for a £31M 5-year benefit.",
+      tools: "PRINCE2 Agile, £4M Budget Control, Vendor Coordination (6 Vendors), Stakeholder & Risk Management, FCA Regulatory Compliance",
+      image: "/images/securelife_project.jpg"
+    },
+    {
       title: "Policy Information Letter Amendment",
       category: "Hybrid Delivery (Waterfall + Agile)",
       description: "Spearheaded a £15,950 policy amendment project across four banking products (CM, Halifax, SW, Barclays), successfully mitigating risk and cutting complaints by resolving inaccurate letter communications.",

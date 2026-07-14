@@ -286,6 +286,38 @@ const TechStack = () => {
               <h4>Methodologies</h4>
             </div>
             <div className="methodologies-cards-grid">
+              {/* PRINCE2 Agile */}
+              <div className="method-card">
+                <h5><span className="tk-symbol">🔄</span>PRINCE2 Agile</h5>
+                <div className="mini-diagram-img-container">
+                  <img src="/images/prince2.jpg" alt="PRINCE2 Agile" className="methodology-card-image" />
+                </div>
+              </div>
+
+              {/* £4M Budget Management */}
+              <div className="method-card">
+                <h5><span className="tk-symbol">💰</span>£4M Budget Management</h5>
+                <div className="mini-diagram-img-container">
+                  <img src="/images/budget-control.jpg" alt="£4M Budget Management" className="methodology-card-image" />
+                </div>
+              </div>
+
+              {/* Stakeholder Management */}
+              <div className="method-card">
+                <h5><span className="tk-symbol">👥</span>Stakeholder Management</h5>
+                <div className="mini-diagram-img-container">
+                  <img src="/images/power-interest-grid.jpg" alt="Stakeholder Management" className="methodology-card-image" />
+                </div>
+              </div>
+
+              {/* Vendor Coordination */}
+              <div className="method-card">
+                <h5><span className="tk-symbol">🤝</span>Vendor Coordination</h5>
+                <div className="mini-diagram-img-container">
+                  <img src="/images/vendor-coordination.jpg" alt="Vendor Coordination" className="methodology-card-image" />
+                </div>
+              </div>
+
               {/* Agile: Mini Sprint Board */}
               <div className="method-card">
                 <h5><span className="tk-symbol">🔄</span>Agile</h5>
@@ -376,6 +408,8 @@ const TechStack = () => {
               </div>
             </div>
           </div>
+
+
         </div>
 
         {isDesktop && (
